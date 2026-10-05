@@ -7,6 +7,16 @@ function updateEmptyMessage() {
   emptyMsg.classList.toggle("hidden", taskList.children.length > 0);
 }
 
+// Menghitung total, selesai, dan belum selesai
+function updateStats() {
+  const total = taskList.children.length;
+  const done = taskList.querySelectorAll("li.done").length;
+
+  document.getElementById("totalCount").textContent = total;
+  document.getElementById("doneCount").textContent = done;
+  document.getElementById("pendingCount").textContent = total - done;
+}
+
 function addTask() {
   const text = taskInput.value.trim();
 
@@ -23,6 +33,7 @@ function addTask() {
   checkbox.type = "checkbox";
   checkbox.addEventListener("change", function () {
     li.classList.toggle("done", checkbox.checked);
+    updateStats();
   });
 
   const span = document.createElement("span");
@@ -35,6 +46,7 @@ function addTask() {
   deleteBtn.addEventListener("click", function () {
     li.remove();
     updateEmptyMessage();
+    updateStats();
   });
 
   li.append(checkbox, span, deleteBtn);
@@ -43,6 +55,7 @@ function addTask() {
   taskInput.value = "";
   taskInput.focus();
   updateEmptyMessage();
+  updateStats();
 }
 
 addBtn.addEventListener("click", addTask);
@@ -52,3 +65,4 @@ taskInput.addEventListener("keydown", function (e) {
 });
 
 updateEmptyMessage();
+updateStats();

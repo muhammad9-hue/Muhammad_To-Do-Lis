@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background:linear-gradient(to bottom, navy, white);
+  background:linear-gradient(to bottom, rgb(91, 14, 110), white);
   color: #1f2d26;
   min-height: 100vh;
   min-height: 100dvh;
@@ -19,7 +19,7 @@ body {
 .app {
   width: 100%;
   max-width: 480px;
-  background: #ccd8fd;
+  background: #edc6fc;
   border-radius: 14px;
   padding: 28px;
   box-shadow: 0 8px 24px rgba(31, 45, 38, 0.12);
@@ -116,4 +116,31 @@ li.done span {
 
 .empty.hidden {
   display: none;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e3ebe6;
+}
+
+.stat-box {
+  background: #f3f7f4;
+  border-radius: 10px;
+  padding: 14px 6px;
+  text-align: center;
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #2f6b4f;
+}
+
+.stat-box span {
+  font-size: 0.8rem;
+  color: #6b7d73;
 }
