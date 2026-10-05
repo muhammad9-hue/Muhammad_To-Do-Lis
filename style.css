@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #e8efe9;
+  color: #1f2d26;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(31, 45, 38, 0.12);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #2f6b4f;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #cfdcd3;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #2f6b4f;
+}
+
+#addBtn {
+  padding: 10px 18px;
+  background: #2f6b4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  background: #24543d;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #e3ebe6;
+}
+
+li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2f6b4f;
+  cursor: pointer;
+}
+
+li span {
+  flex: 1;
+  word-break: break-word;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #8a9a91;
+}
+
+.delete-btn {
+  background: none;
+  border: 1px solid #d9a3a3;
+  color: #b23a3a;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b23a3a;
+  color: #fff;
+}
+
+.empty {
+  text-align: center;
+  color: #8a9a91;
+  padding: 12px 0;
+}
+
+.empty.hidden {
+  display: none;
+}
