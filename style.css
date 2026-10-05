@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #e8efe9;
+  background:linear-gradient(to bottom, navy, white);
   color: #1f2d26;
   min-height: 100vh;
   min-height: 100dvh;
@@ -19,7 +19,7 @@ body {
 .app {
   width: 100%;
   max-width: 480px;
-  background: #fff;
+  background: #ccd8fd;
   border-radius: 14px;
   padding: 28px;
   box-shadow: 0 8px 24px rgba(31, 45, 38, 0.12);
